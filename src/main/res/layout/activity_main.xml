@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@drawable/cluebackground"
+    android:id="@+id/mainActivity">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pause"
+        android:id="@+id/pauseButton"
+        android:clickable="true"
+        android:onClick="pause"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound On/Off"
+        android:id="@+id/soundButton"
+        android:onClick="playMusic"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/pauseButton"
+        android:layout_toStartOf="@+id/pauseButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main Menu"
+        android:id="@+id/menuButton"
+        android:onClick="goToMenu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress:"
+        android:id="@+id/progressText"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#DBD7DB" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/progressText"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:progress="50"
+        android:indeterminate="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/abutton"
+        android:clickable="true"
+        android:onClick="talk"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="15dp"
+        android:layout_above="@+id/imageView3"
+        android:layout_alignRight="@+id/soundButton"
+        android:layout_alignEnd="@+id/soundButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/bbutton"
+        android:layout_marginBottom="96dp"
+        android:clickable="true"
+        android:onClick="pickUp"
+        android:paddingRight="28dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upButton"
+        android:src="@drawable/up"
+        android:paddingRight="10dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignRight="@+id/menuButton"
+        android:layout_alignEnd="@+id/menuButton"
+        android:clickable="true"
+        android:onClick="toUp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downButton"
+        android:src="@drawable/down"
+        android:layout_marginTop="36dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignLeft="@+id/upButton"
+        android:layout_alignStart="@+id/upButton"
+        android:clickable="true"
+        android:onClick="toDown"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftButton"
+        android:src="@drawable/left"
+        android:clickable="true"
+        android:onClick="toLeft"
+        android:paddingBottom="10dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toLeftOf="@+id/downButton"
+        android:layout_toStartOf="@+id/downButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightButton"
+        android:src="@drawable/right"
+        android:clickable="true"
+        android:paddingBottom="10dp"
+        android:onClick="toRight"
+        android:layout_alignTop="@+id/leftButton"
+        android:layout_toRightOf="@+id/downButton"
+        android:layout_toEndOf="@+id/downButton" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hero"
+        android:src="@drawable/hero"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
